@@ -1,0 +1,15 @@
+services:
+  frontend:
+    image: eilishh/memyselfthechef
+    build: ./frontend
+    container_name: frontend_c
+    ports:
+      - '3000:3000'
+  backend:
+    image: eilishh/memyselfthechef
+    build: ./backend
+    container_name: backend_c
+    ports:
+      - '8080:8080'
+    stdin_open: true
+    tty: true
